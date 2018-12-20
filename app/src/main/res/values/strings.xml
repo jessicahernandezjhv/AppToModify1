@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppToModify1</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nom_fragment">Soc el fragment </string>
+</resources>
