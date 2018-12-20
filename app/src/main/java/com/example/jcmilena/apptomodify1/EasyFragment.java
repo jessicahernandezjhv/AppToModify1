@@ -19,10 +19,8 @@ public class EasyFragment extends Fragment {
     private static final String ARG_PARAM2 = "color";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private int mParam2;
-
-    EasyFragmentListener mListener;
+    private String mParam1 ="1";
+    private int mParam2 = R.color.colorBlanco;
 
 
 
@@ -30,20 +28,12 @@ public class EasyFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment EasyFragment.
-     */
+
     // TODO: Rename and change types and number of parameters
-    public static EasyFragment newInstance(String param1, int param2) {
+    public static EasyFragment newInstance(String param1) {
         EasyFragment fragment = new EasyFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
-        args.putInt(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -53,7 +43,6 @@ public class EasyFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getInt(ARG_PARAM2,R.color.colorBlanco);
         }
     }
 
@@ -71,8 +60,8 @@ public class EasyFragment extends Fragment {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListener.pulsado(mParam1);
-            }
+                //Acció a fer
+                }
         });
 
 
@@ -82,19 +71,9 @@ public class EasyFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mListener = (EasyFragmentListener) getActivity();
 
     }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-    }
-
-    public interface EasyFragmentListener {
-
-        public void pulsado (String numero);
-    }
 
 
 }
